@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Icono y texto para Registro de Productos -->
+    <Button
+        android:id="@+id/registro_productos_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_registro_productos"
+        android:text="Registro de Productos"
+        android:onClick="goToRegistroProductos" />
+
+    <!-- Icono y texto para Actualización de Productos -->
+    <Button
+        android:id="@+id/actualizacion_productos_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_actualizacion_productos"
+        android:text="Actualización de Productos"
+        android:onClick="goToActualizacionProductos" />
+
+    <!-- Icono y texto para Búsqueda de Productos -->
+    <Button
+        android:id="@+id/busqueda_productos_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_busqueda_productos"
+        android:text="Búsqueda de Productos"
+        android:onClick="goToBusquedaProductos" />
+
+    <!-- Icono y texto para Control de Inventario -->
+    <Button
+        android:id="@+id/control_inventario_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_control_inventario"
+        android:text="Control de Inventario"
+        android:onClick="goToControlInventario" />
+
+</LinearLayout>

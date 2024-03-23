@@ -1,9 +1,8 @@
 package com.uniciencia.sistema_invetario;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -12,11 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private EditText usernameEditText, passwordEditText;
-    private Button loginButton;
-
-    // Datos de usuario de ejemplo
-    private static final String CORRECT_USERNAME = "usuario";
-    private static final String CORRECT_PASSWORD = "contraseña";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,23 +19,26 @@ public class MainActivity extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.username_edit_text);
         passwordEditText = findViewById(R.id.password_edit_text);
-        loginButton = findViewById(R.id.login_button);
+    }
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String enteredUsername = usernameEditText.getText().toString();
-                String enteredPassword = passwordEditText.getText().toString();
+    // Método para manejar el inicio de sesión
+    public void login(View view) {
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
 
-                if (enteredUsername.equals(CORRECT_USERNAME) && enteredPassword.equals(CORRECT_PASSWORD)) {
+        // Aquí deberías agregar la lógica para verificar el nombre de usuario y la contraseña.
+        // Por ejemplo, podrías compararlos con valores predefinidos o consultar una base de datos.
 
-                    Toast.makeText(MainActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    
-                    Toast.makeText(MainActivity.this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        // En este ejemplo simple, solo comprobamos si ambos campos no están vacíos
+        if (!username.isEmpty() && !password.isEmpty()) {
+            // Inicio de sesión exitoso
+            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+            // Iniciar la actividad del panel principal
+            startActivity(new Intent(this, PanelActivity.class));
+        } else {
+            // Mostrar mensaje de error si uno o ambos campos están vacíos
+            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+        }
     }
 }
+

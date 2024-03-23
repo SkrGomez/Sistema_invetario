@@ -5,12 +5,14 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Campo de texto para el nombre de usuario -->
     <EditText
         android:id="@+id/username_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre de usuario" />
 
+    <!-- Campo de texto para la contraseña -->
     <EditText
         android:id="@+id/password_edit_text"
         android:layout_width="match_parent"
@@ -19,12 +21,15 @@
         android:hint="Contraseña"
         android:inputType="textPassword" />
 
+    <!-- Botón para iniciar sesión -->
     <Button
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Iniciar sesión" />
+        android:text="Iniciar sesión"
+        android:onClick="login" />
 
 </LinearLayout>
+
 
