@@ -65,7 +65,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="-137dp"
-        android:background="#172196F3"
+        android:background="#529844"
         android:text="Registrarse"
         android:textColor="#FFFF"
         android:textSize="20dp" />
