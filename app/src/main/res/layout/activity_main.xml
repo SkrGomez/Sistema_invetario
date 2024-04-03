@@ -12,8 +12,8 @@
     <!-- Campo de texto para el nombre de usuario -->
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="357dp"
-        android:layout_height="347dp"
+        android:layout_width="341dp"
+        android:layout_height="301dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
