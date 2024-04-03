@@ -71,7 +71,7 @@
         android:layout_alignBottom="@+id/password"
         android:layout_centerInParent="true"
         android:layout_marginBottom="-94dp"
-        android:background="#172196F3"
+        android:background="#529844"
         android:text="Ingresar"
         android:textColor="#FFFF"
         android:textSize="20dp" />

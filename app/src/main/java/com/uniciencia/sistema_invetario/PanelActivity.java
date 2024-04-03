@@ -3,6 +3,7 @@ package com.uniciencia.sistema_invetario;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -19,6 +20,32 @@ public class PanelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel);
+    }
+
+    // logout below
+    private void Logout()
+    {
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(PanelActivity.this,LoginActivity.class));Toast.makeText(PanelActivity.this,"LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case  R.id.logoutMenu:{
+                Logout();
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void goToRegistroProductos(View view) {
@@ -41,33 +68,6 @@ public class PanelActivity extends AppCompatActivity {
         startActivity(new Intent(this, ControlInventarioActivity.class));
     }
 
-
-    // logout below
-    private void Logout()
-    {
-        firebaseAuth.signOut();
-        finish();
-        startActivity(new Intent(PanelActivity.this,LoginActivity.class));
-        Toast.makeText(PanelActivity.this,"LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
-
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case  R.id.logoutMenu:{
-                Logout();
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 
 }

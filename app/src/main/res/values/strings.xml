@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sistema_invetario</string>
+    <string name="app_name">Sistema de inventario</string>
     <string name="title_activity_login">login</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
