@@ -1,35 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#507F85"
+    tools:context=".MainActivity"
+    android:orientation="vertical" >
 
     <!-- Campo de texto para el nombre de usuario -->
-    <EditText
-        android:id="@+id/username_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre de usuario" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="357dp"
+        android:layout_height="347dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        app:srcCompat="@drawable/logo" />
 
-    <!-- Campo de texto para la contraseña -->
-    <EditText
-        android:id="@+id/password_edit_text"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="221dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-106dp"
+        android:fontFamily="@font/allura"
+        android:text="InventaTech"
+        android:textColor="#BECA34"
+        android:textSize="55dp"
+        android:textStyle="bold" />
 
-    <!-- Botón para iniciar sesión -->
     <Button
-        android:id="@+id/login_button"
-        android:layout_width="match_parent"
+        android:id="@+id/btnLogin"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Iniciar sesión"
-        android:onClick="login" />
+        android:layout_alignBottom="@+id/textView"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-62dp"
+        android:backgroundTint="#419EAB"
+        android:drawableLeft="@drawable/ic_person_login"
+        android:hint="Ingresar"
+        android:textColorHint="#ffff"
+        android:textSize="18sp" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="-70dp"
+        android:backgroundTint="#419EAB"
+        android:drawableLeft="@drawable/ic_person_register"
+        android:hint="Registrar"
+        android:textColorHint="#FFFF"
+        android:textSize="18sp" />
+
+</RelativeLayout>
 
 
