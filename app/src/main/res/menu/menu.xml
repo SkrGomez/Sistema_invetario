@@ -11,7 +11,7 @@
                 android:id="@+id/logoutMenu"
                 android:icon="@drawable/ic_lock_open_blue_24dp"
                 android:orderInCategory="300"
-                android:title="Logout"
+                android:title="Salir"
                 app:showAsAction="collapseActionView">
 
             </item>
