@@ -35,23 +35,23 @@
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_password"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="#fff"
         android:textColorHint="#ffff" />
 
     <EditText
         android:id="@+id/confirmPassword"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
         android:layout_alignBottom="@+id/passwordRegister"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:layout_marginBottom="-71dp"
+        android:layout_marginBottom="-68dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
         android:ems="10"
-        android:hint="Confirm Password"
+        android:hint="Confirmar Contraseña"
         android:inputType="textPassword"
         android:textColor="#fff"
         android:textColorHint="#ffff" />

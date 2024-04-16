@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607706895083",
+    "project_id": "sistema-de-invetario",
+    "storage_bucket": "sistema-de-invetario.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607706895083:android:481fa5491e5a06715464ae",
+        "android_client_info": {
+          "package_name": "com.uniciencia.sistema_invetario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkednKEftb1psBACpPkEwnxI38jKvozps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
