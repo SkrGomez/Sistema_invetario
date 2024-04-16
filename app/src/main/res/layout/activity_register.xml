@@ -41,7 +41,7 @@
         android:textColorHint="#ffff" />
 
     <EditText
-        android:id="@+id/confirmPassword"
+        android:id="@+id/department"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:layout_alignBottom="@+id/passwordRegister"
@@ -49,10 +49,10 @@
         android:layout_marginTop="22dp"
         android:layout_marginBottom="-68dp"
         android:background="#11000000"
-        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:drawableLeft="@drawable/ic_forum_black_24dp"
         android:ems="10"
-        android:hint="Confirmar Contraseña"
-        android:inputType="textPassword"
+        android:hint="Departamento"
+        android:inputType="textPersonName"
         android:textColor="#fff"
         android:textColorHint="#ffff" />
 
@@ -60,7 +60,7 @@
         android:id="@+id/button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/confirmPassword"
+        android:layout_alignBottom="@+id/department"
 
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"

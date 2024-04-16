@@ -14,20 +14,21 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class PanelActivity extends AppCompatActivity {
 
-    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     // logout below
     private void Logout()
     {
-        firebaseAuth.signOut();
+        mAuth.signOut();
         finish();
-        startActivity(new Intent(PanelActivity.this,LoginActivity.class));Toast.makeText(PanelActivity.this,"LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(PanelActivity.this,LoginActivity.class));Toast.makeText(PanelActivity.this,"Cierre de sesión exitoso", Toast.LENGTH_SHORT).show();
 
     }
 

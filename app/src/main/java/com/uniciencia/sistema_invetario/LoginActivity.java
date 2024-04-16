@@ -1,5 +1,6 @@
 package com.uniciencia.sistema_invetario;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -11,12 +12,18 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginActivity extends AppCompatActivity {
 
     public EditText username, password;
     public Button Login;
     public ProgressBar progressBar;
 
+    private FirebaseAuth mAuth;
     private ProgressDialog processDialog;
 
     @Override
@@ -30,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         progressBar = (ProgressBar) findViewById(R.id.progressbars);
         progressBar.setVisibility(View.GONE);
-
+        mAuth = FirebaseAuth.getInstance();
         processDialog = new ProgressDialog(this);
 
 
@@ -51,19 +58,36 @@ public class LoginActivity extends AppCompatActivity {
         processDialog.setMessage("................Por favor esperar.............");
         processDialog.show();
 
-        // Aquí deberías agregar la lógica para verificar el nombre de usuario y la contraseña.
-        // Por ejemplo, podrías compararlos con valores predefinidos o consultar una base de datos.
+        //Lógica para verificar el nombre de usuario y la contraseña.
 
-        // En este ejemplo simple, solo comprobamos si ambos campos no están vacíos
         if (!userEmail.isEmpty() && !userPassword.isEmpty()) {
-            // Inicio de sesión exitoso
-            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-            // Iniciar la actividad del panel principal
-            startActivity(new Intent(this, PanelActivity.class));
-        } else {
-            // Mostrar mensaje de error si uno o ambos campos están vacíos
-            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+            if (userPassword.length() >= 6) {
+                mAuth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            processDialog.dismiss();
+                            Intent intent = new Intent(LoginActivity.this, PanelActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast.makeText(LoginActivity.this, "La contraseña o el password son incorrectos", Toast.LENGTH_SHORT).show();
+                            processDialog.dismiss();
+                        }
+                    }
+                });
+            }
+            else {
+                Toast.makeText(this, "La contraseña debe tener mas de 6 caracteres", Toast.LENGTH_SHORT).show();
+                processDialog.dismiss();
+            }
         }
+        else {
+            Toast.makeText(this, "La contraseña y el email son obligatorios", Toast.LENGTH_SHORT).show();
+            processDialog.dismiss();
+        }
+
     }
 
 }
