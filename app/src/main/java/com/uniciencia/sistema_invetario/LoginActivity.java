@@ -72,14 +72,14 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
                         }
                         else {
-                            Toast.makeText(LoginActivity.this, "La contraseña o el password son incorrectos", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "La contraseña o el usuario son incorrectos", Toast.LENGTH_SHORT).show();
                             processDialog.dismiss();
                         }
                     }
                 });
             }
             else {
-                Toast.makeText(this, "La contraseña debe tener mas de 6 caracteres", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "La contraseña debe tener más de 6 caracteres", Toast.LENGTH_SHORT).show();
                 processDialog.dismiss();
             }
         }
