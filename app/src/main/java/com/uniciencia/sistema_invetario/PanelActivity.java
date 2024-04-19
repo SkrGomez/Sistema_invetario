@@ -50,8 +50,8 @@ public class PanelActivity extends AppCompatActivity {
     }
 
     public void goToRegistroProductos(View view) {
-        // Implementa la acción para el botón "Registro de Productos"
-        startActivity(new Intent(this, RegistroProductosActivity.class));
+        Intent intent = new Intent(this, RegistroProductosActivity.class);
+        startActivity(intent);
     }
 
     public void goToActualizacionProductos(View view) {

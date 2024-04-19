@@ -10,9 +10,9 @@
         android:id="@+id/registro_productos_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_registro_productos"
         android:text="Registro de Productos"
         android:onClick="goToRegistroProductos" />
+
 
     <!-- Icono y texto para Actualización de Productos -->
     <Button
