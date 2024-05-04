@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "607706895083",
+    "firebase_url": "https://sistema-de-invetario-default-rtdb.firebaseio.com",
     "project_id": "sistema-de-invetario",
     "storage_bucket": "sistema-de-invetario.appspot.com"
   },

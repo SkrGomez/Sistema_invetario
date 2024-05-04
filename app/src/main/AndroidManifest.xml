@@ -26,6 +26,7 @@
         <activity android:name=".PanelActivity" />
         <!-- Nueva actividad para el registro de productos -->
         <activity android:name=".RegistroProductosActivity" />
+        <activity android:name=".BusquedaProductosActivity" />
     </application>
 
 </manifest>
