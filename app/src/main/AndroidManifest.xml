@@ -27,6 +27,7 @@
         <!-- Nueva actividad para el registro de productos -->
         <activity android:name=".RegistroProductosActivity" />
         <activity android:name=".BusquedaProductosActivity" />
+        <activity android:name=".ActualizacionProductosActivity" />
     </application>
 
 </manifest>

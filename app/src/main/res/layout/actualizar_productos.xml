@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etProductCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código del producto"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_below="@id/etProductCode"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:onClick="searchProduct"/>
+
+    <TextView
+        android:id="@+id/tvProductDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBuscar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del producto"
+        android:layout_below="@id/tvProductDetails"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/etProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio del producto"
+        android:layout_below="@id/etProductName"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/etProductLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ubicación del producto"
+        android:layout_below="@id/etProductPrice"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:layout_below="@id/etProductLocation"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="actualizarProducto"/>
+
+</RelativeLayout>
