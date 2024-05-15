@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- EditText para ingresar el código del producto -->
+    <EditText
+        android:id="@+id/etCodigoProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código del Producto" />
+
+    <!-- Botón para buscar el producto -->
+    <Button
+        android:id="@+id/btnBuscarProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Producto"
+        android:onClick="buscarProducto" />
+
+    <!-- EditTexts para mostrar información del producto -->
+    <TextView
+        android:id="@+id/tvNombreProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Producto: " />
+
+    <TextView
+        android:id="@+id/tvCantidadDisponible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cantidad Disponible: " />
+
+    <TextView
+        android:id="@+id/tvPrecioUnitario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio Unitario: " />
+
+    <!-- EditText para ingresar la cantidad a vender -->
+    <EditText
+        android:id="@+id/etCantidadVenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad a Vender" />
+
+    <Button
+        android:id="@+id/btnCalcularTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Total"
+        android:onClick="calcularTotalVenta" />
+
+
+    <!-- Botón para realizar la venta -->
+    <Button
+        android:id="@+id/btnVender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vender"
+        android:onClick="venderProducto" />
+
+    <!-- TextView para mostrar el total de la venta -->
+    <TextView
+        android:id="@+id/tvTotalVenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total de la Venta: "
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- TextView para mostrar mensajes de error -->
+    <TextView
+        android:id="@+id/tvMensajeError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone" />
+
+</LinearLayout>

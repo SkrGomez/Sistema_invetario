@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="tipo_novedad">
+        <item>Deterioro</item>
+        <item>Robo</item>
+        <item>Vencimiento</item>
+        <item>Traslado otra sucursal</item>
+    </string-array>
+</resources>

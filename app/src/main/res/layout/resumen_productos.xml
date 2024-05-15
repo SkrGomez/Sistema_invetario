@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTotalInventorySummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resumen Total del Inventario: " />
+
+    <TextView
+        android:id="@+id/tvProductsBySectionSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Productos por Sección: " />
+
+    <TextView
+        android:id="@+id/tvMostExpensiveProductsSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Productos más caros: " />
+
+    <TextView
+        android:id="@+id/tvCheapestProductsSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Productos más económicos: " />
+
+    <TextView
+        android:id="@+id/tvInventoryStatusSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado del Inventario: " />
+
+</LinearLayout>
+</ScrollView>

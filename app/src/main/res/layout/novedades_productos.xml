@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etCodigoProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código del Producto" />
+
+    <Button
+        android:id="@+id/btnBuscarProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Producto"
+        android:onClick="buscarProducto" />
+
+    <TextView
+        android:id="@+id/tvNombreProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Producto: " />
+
+    <TextView
+        android:id="@+id/tvUbicacionProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ubicación del Producto: " />
+
+    <TextView
+        android:id="@+id/tvPrecioProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio del Producto: " />
+
+    <Spinner
+        android:id="@+id/spinnerEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tipo_novedad" />
+
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad" />
+
+    <Button
+        android:id="@+id/btnActualizarEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Estado" />
+
+</LinearLayout>

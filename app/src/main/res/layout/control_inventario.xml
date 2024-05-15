@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Botón para Resumen de Productos -->
+    <Button
+        android:id="@+id/resumenes_inventario_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToResumenProductos"
+        android:text="Resúmenes del Inventario"/>
+
+    <!-- Botón para Novedades del Producto -->
+    <Button
+        android:id="@+id/novedades_producto_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToNovedadesProductos"
+        android:text="Novedades del Producto"
+        />
+
+    <!-- Botón para Salidas de Productos -->
+        <Button
+        android:id="@+id/salidas_productos_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToSalidasProductos"
+        android:text="Salidas de Productos" />
+
+    <!-- Botón para Notificaciones -->
+    <Button
+        android:id="@+id/notificaciones_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToNotificaciones"
+        android:text="Notificaciones" />
+
+</LinearLayout>
